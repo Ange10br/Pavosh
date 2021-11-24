@@ -145,7 +145,7 @@ a, input, button, submit {
 
     /* font */
 
-    font-size: 2rem;
+    font-size: 2.7rem;
     font-weight: 500;
     font-family: var(--m-plus);
     color: var(--just-white);
@@ -188,8 +188,9 @@ body {
 
 main {
     margin: 0 auto;
-    width: 90%;
-    max-width: 1500px;
+    width: 100%;
+    max-width: 1920px;
+    min-width: 320px;
     height: 3000px;
     /* box-shadow: 0px 9px 10px 5px rgba(119, 119, 119, 0.774); */
     background: var(--off-white);
@@ -249,11 +250,11 @@ main {
 }
 
 .about-video.live {
-    grid-column: 3/6;
+    grid-area: 1/3/2/6;
 }
 
 .about-video.cover {
-    grid-column: 1/4;
+    grid-area: 2/1/3/4;
 }
 
 .about-cover {
@@ -275,19 +276,26 @@ main {
 .main-music {
 
     width: 100%;
+    height: 800px;
+
     flex-direction: column;
-    background-image: url('./Assets/images/bg-music.png');
+    justify-content: space-evenly;
+
+    background-image: url('./Assets/images/music-bg.jpg');
     background-size: cover;
     background-position: center;
     /* border-radius: 30px; */
 }
 
 .main-music__title {
+    background-color: rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.5rem); 
     font-size: 5rem;
     font-family: var(--m-plus);
     text-align: center;
     color: var(--pink);
-    text-shadow: 4px 4px 2px var(--bule-sky);
+    text-shadow: 2px 2px var(--bule-sky);
 }
 
 /** music logos **/
@@ -317,11 +325,72 @@ main {
     border-radius: 15px;
 
     background-color: rgba(0, 0, 0, 0.24);
-    backdrop-filter: blur(04rem);
-    -webkit-backdrop-filter: blur(2rem);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
 }
 
 .widget {
     border-radius: 20px;
 }
 
+
+@media (max-width:1100px) {
+    
+    .main-about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-me{
+        margin: 0;
+        text-align: center;
+    }
+
+    .about-cover {
+        max-width: 560px;
+        padding: 0;
+        margin: 30px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 920px) {
+
+    .main-music {
+        height: 2200px;
+    }
+
+    .container-music {
+        flex-direction: column;
+        height: 2000px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 720px) {
+    .header-nav {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        margin: 0;
+    }
+    .header-logo {
+        order: -1;
+    }
+}
+
+@media (max-width: 520px) {
+    .header-presentation {
+        width: 320px;
+
+        background-color: unset;
+        backdrop-filter: unset;
+    }
+
+    .header-presentation__profession {
+        line-height: 3rem;
+        margin: 5px 0;
+    }
+
+}
