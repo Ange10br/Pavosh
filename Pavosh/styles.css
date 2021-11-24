@@ -11,10 +11,11 @@
     --wine: #43263c;
 
     /* font colors */
-    --off-white: #E2E2E2;
+    --off-white: #c9c9c9;
     --just-white: #FFFFFF;
     --warm-black: #1F1E1C;
     --just-black: #000000;
+    
 
     /* fonts */
 
@@ -149,7 +150,7 @@ a, input, button, submit {
     font-family: var(--m-plus);
     color: var(--just-white);
 
-    background-color: rgba(0, 0, 0, 0.719);
+    background-color: rgba(0, 0, 0, 0.685);
     backdrop-filter: blur(2rem);
     -webkit-backdrop-filter: blur(2rem);
     z-index: 1;
@@ -187,10 +188,11 @@ body {
 
 main {
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
     max-width: 1500px;
     height: 3000px;
-    box-shadow: 0px 9px 10px 5px rgba(119, 119, 119, 0.774);
+    /* box-shadow: 0px 9px 10px 5px rgba(119, 119, 119, 0.774); */
+    background: var(--off-white);
 }
 
 .main-about {
@@ -232,7 +234,7 @@ main {
     font-weight: 500;
     font-size: 2.6rem;
     font-family: var(--mutaka);
-    line-height: 2.6rem;
+    line-height: 3rem;
     color: var(--blue-dark);
 }
 
@@ -265,5 +267,61 @@ main {
     font-size: 2.6rem;
     font-weight: 500;
     font-family: var(--mutaka);
+    line-height: 3rem;
+}
+
+/*** main music ***/
+
+.main-music {
+
+    width: 100%;
+    flex-direction: column;
+    background-image: url('./Assets/images/bg-music.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+}
+
+.main-music__title {
+    font-size: 5rem;
+    font-family: var(--m-plus);
+    text-align: center;
+    color: var(--pink);
+    text-shadow: 4px 4px 2px var(--bule-sky);
+}
+
+/** music logos **/
+
+.music-logo {
+    width: 100px;
+}
+
+.music-logo:hover {
+    transform: scale(1.2);
+}
+
+/** music items **/
+
+.container-music {
+    margin: 40px 0;
+    justify-content: space-evenly;
+}
+
+.music-item {
+    width: 300px;
+    height: 600px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border-radius: 15px;
+
+    background-color: rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(04rem);
+    -webkit-backdrop-filter: blur(2rem);
+}
+
+.widget {
+    border-radius: 20px;
 }
 
