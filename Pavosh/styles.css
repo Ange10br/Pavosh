@@ -356,7 +356,7 @@ main {
 /**** contact ****/
 
 .main-contact {
-    height: 500px;
+    height: auto;
     padding: 20px 0;
     flex-direction: column;
     justify-content: space-evenly;
@@ -364,6 +364,7 @@ main {
 
 .contact-container {
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .contact-title {
@@ -397,6 +398,8 @@ main {
 /**** footer ****/
 
 .footer {
+    width: 100%;
+    min-width: 320px;
     align-items: center;
     justify-content: center;
     background-color: var(--just-black);
@@ -442,6 +445,18 @@ main {
     .header-presentation__profession {
         line-height: 3rem;
         margin: 5px 0;
+    }
+
+    .contact-item {
+        width: 150px;
+        height: 150px;
+        background-image: url(./Assets/icons/bg-icon.png);
+        background-size: 150px;
+    }
+    
+    .contact-item__img {
+        width: 50px;
+        height: 50px;
     }
 
 }
