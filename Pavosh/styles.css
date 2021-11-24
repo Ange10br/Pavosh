@@ -279,7 +279,7 @@ main {
     background-image: url('./Assets/images/bg-music.png');
     background-size: cover;
     background-position: center;
-    border-radius: 30px;
+    /* border-radius: 30px; */
 }
 
 .main-music__title {
